@@ -1,113 +1,177 @@
 import Image from "next/image";
+import Search from "../assets/search.png";
+import Cart from "../assets/cart.png";
+import User from "../assets/user.png";
+import Chair from "../assets/chair.png";
+import Delivery from "../assets/delivery.png";
+import True from "../assets/true.png";
+import Purchase from "../assets/purchase.png";
+import Recycle from "../assets/recycle.png";
+import Vase from "../assets/vase.png";
+import Vasee from "../assets/vasee.png";
+import Lamp from "../assets/lamp.png";
+import Chir from "../assets/chir.png";
+import Large from "../assets/large.png";
+import Furn from "../assets/furn.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <div className="container mx-auto px-12 flex items-center justify-between min-h-14">
+        <Image className="w-5" src={Search} alt="" />
+        <h2 className="font-medium text-2xl">Avion</h2>
+        <div className="flex items-center">
+          <Image className="mx-2 w-5" src={Cart} alt="" />
+          <Image className="mx-2 w-5" src={User} alt="" />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <hr />
+      <div className="text-gray-500 flex items-center justify-center my-4 mx-4">
+        <h3 className="mx-4">Plant pots</h3>
+        <h3 className="mx-4">Ceramics</h3>
+        <h3 className="mx-4">Tables</h3>
+        <h3 className="mx-4">Chairs</h3>
+        <h3 className="mx-4">Crockery</h3>
+        <h3 className="mx-4">Tableware</h3>
+        <h3 className="mx-4">Cutlery</h3>
+      </div>
+      <div className="my-16 text-white flex container mx-auto px-12">
+        <div className="bg-gray-600 px-9 py-3">
+          <h1 className="w-[460px] text-3xl my-6 font-normal">
+            The furniture brand for the future, with timeless designs
+          </h1>
+          <button className="bg-gray-500 py-4 px-4">View collection</button>
+          <p className="mt-40 font-normal text-lg">
+            A new era in eco friendly furniture with Avelon, the French luxury
+            retail brand with nice fonts, tasteful colors and a beautiful way to
+            display things digitally using modern web technologies.
+          </p>
+        </div>
+        <Image className="w-[540px]" src={Chair} alt="" />
+      </div>
+      <div className="container mx-auto px-12 mb-20">
+        <h2 className="text-center text-2xl font-normal mb-10">
+          What makes our brand different
+        </h2>
+        <div className="flex justify-between">
+          <div className="w-[23%]">
+            <Image className="mb-3" src={Delivery} alt="" />
+            <h3 className="font-normal text-xl mb-2">Next day as standard</h3>
+            <p className="font-normal text-base">
+              Order before 3pm and get your order the next day as standard
+            </p>
+          </div>
+          <div className="w-[23%]">
+            <Image className="mb-3" src={True} alt="" />
+            <h3 className="font-normal text-xl mb-2">Made by true artisans</h3>
+            <p className="font-normal text-base">
+              Handmade crafted goods made with passion and craftmanship
+            </p>
+          </div>
+          <div className="w-[23%]">
+            <Image className="mb-3" src={Purchase} alt="" />
+            <h3 className="font-normal text-xl mb-2">Unbeatable prices</h3>
+            <p className="font-normal text-base">
+              For our materials and quality you find better prices anywhere
+            </p>
+          </div>
+          <div className="w-[23%]">
+            <Image className="mb-3" src={Recycle} alt="" />
+            <h3 className="font-normal text-xl mb-2">Recycled packaging</h3>
+            <p className="font-normal text-base">
+              We use 100% recycled packaging to our footprint is manageable
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-12">
+        <h1 className="font-normal text-2xl mb-10">New ceramics</h1>
+        <div className="flex justify-between items-center">
+          <div>
+            <Image src={Chair} alt="" />
+            <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
+            <p className="font-normal text-lg mb-6">£250</p>
+          </div>
+          <div>
+            <Image src={Vase} alt="" />
+            <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
+            <p className="font-normal text-lg mb-6">£155</p>
+          </div>
+          <div>
+            <Image src={Vasee} alt="" />
+            <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
+            <p className="font-normal text-lg mb-6">£125</p>
+          </div>
+          <div>
+            <Image src={Lamp} alt="" />
+            <h3 className="font-normal text-xl my-2">The Lucy Lamp</h3>
+            <p className="font-normal text-lg mb-6">£399</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <button className="border p-4 mb-20">View collection</button>
+        </div>
+      </div>
+      <div className="container mx-auto px-12">
+        <h1 className="font-normal text-2xl mb-8">Our popular products</h1>
+        <div className="flex items-center justify-between">
+          <div>
+            <Image src={Large} alt="" />
+            <h3 className="font-normal text-xl my-2">The Poplar suede sofa</h3>
+            <p className="font-normal text-lg mb-6">£980</p>
+          </div>
+          <div>
+            <Image src={Chair} alt="" />
+            <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
+            <p className="font-normal text-lg mb-6">£250</p>
+          </div>
+          <div>
+            <Image src={Chir} alt="" />
+            <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
+            <p className="font-normal text-lg mb-6">£250</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <button className="border p-4 mb-20">View collection</button>
+        </div>
+      </div>
+      <div className="text-center bg-slate-200">
+        <h1 className="font-normal text-4xl pt-10 pb-2">
+          Join the club and get the benefits
+        </h1>
+        <p className="font-normal text-base mb-10">
+          Sign up for our newsletter and receive exclusive offers on new ranges,
+          sales, pop up stores and more
+        </p>
+        <input
+          className="border py-3 pl-3"
+          type="text"
+          placeholder="your@email.com"
+        />
+        <input
+          className="mb-10 py-3 cursor-pointer px-5 bg-teal-900 text-white"
+          type="submit"
+          value="Sign Up"
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      <div className="container mx-auto px-12 mt-20 flex justify-between">
+        <div className="mt-20 w-[45%]">
+          <h1 className="font-normal text-2xl mb-6">
+            From a studio in London to a global brand with over 400 outlets
+          </h1>
+          <p className="mb-6">
+            When we started Avion, the idea was simple. Make high quality
+            furniture affordable and available for the mass market.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p className="mb-40">
+            Handmade, and lovingly crafted furniture and homeware is what we
+            live, breathe and design so our Chelsea boutique become the hotbed
+            for the London interior design community.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <button className="border p-4">Get in touch</button>
+        </div>
+        <Image src={Furn} alt="" />
       </div>
-    </main>
+    </div>
   );
 }
