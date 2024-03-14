@@ -3,16 +3,14 @@ import Search from "../assets/search.png";
 import Cart from "../assets/cart.png";
 import User from "../assets/user.png";
 import Chair from "../assets/chair.png";
-import Delivery from "../assets/delivery.png";
-import True from "../assets/true.png";
-import Purchase from "../assets/purchase.png";
-import Recycle from "../assets/recycle.png";
 import Vase from "../assets/vase.png";
 import Vasee from "../assets/vasee.png";
 import Lamp from "../assets/lamp.png";
 import Chir from "../assets/chir.png";
 import Large from "../assets/large.png";
-import Furn from "../assets/furn.png";
+import JoinInput from "@/components/JoinInput";
+import Different from "@/components/Different";
+import ChangeCountry from "@/components/ChangeCountry";
 
 export default function Home() {
   return (
@@ -49,41 +47,7 @@ export default function Home() {
         </div>
         <Image className="w-[540px]" src={Chair} alt="" />
       </div>
-      <div className="container mx-auto px-12 mb-20">
-        <h2 className="text-center text-2xl font-normal mb-10">
-          What makes our brand different
-        </h2>
-        <div className="flex justify-between">
-          <div className="w-[23%]">
-            <Image className="mb-3" src={Delivery} alt="" />
-            <h3 className="font-normal text-xl mb-2">Next day as standard</h3>
-            <p className="font-normal text-base">
-              Order before 3pm and get your order the next day as standard
-            </p>
-          </div>
-          <div className="w-[23%]">
-            <Image className="mb-3" src={True} alt="" />
-            <h3 className="font-normal text-xl mb-2">Made by true artisans</h3>
-            <p className="font-normal text-base">
-              Handmade crafted goods made with passion and craftmanship
-            </p>
-          </div>
-          <div className="w-[23%]">
-            <Image className="mb-3" src={Purchase} alt="" />
-            <h3 className="font-normal text-xl mb-2">Unbeatable prices</h3>
-            <p className="font-normal text-base">
-              For our materials and quality you find better prices anywhere
-            </p>
-          </div>
-          <div className="w-[23%]">
-            <Image className="mb-3" src={Recycle} alt="" />
-            <h3 className="font-normal text-xl mb-2">Recycled packaging</h3>
-            <p className="font-normal text-base">
-              We use 100% recycled packaging to our footprint is manageable
-            </p>
-          </div>
-        </div>
-      </div>
+      <Different />
       <div className="container mx-auto px-12">
         <h1 className="font-normal text-2xl mb-10">New ceramics</h1>
         <div className="flex justify-between items-center">
@@ -135,43 +99,8 @@ export default function Home() {
           <button className="border p-4 mb-20">View collection</button>
         </div>
       </div>
-      <div className="text-center bg-slate-200">
-        <h1 className="font-normal text-4xl pt-10 pb-2">
-          Join the club and get the benefits
-        </h1>
-        <p className="font-normal text-base mb-10">
-          Sign up for our newsletter and receive exclusive offers on new ranges,
-          sales, pop up stores and more
-        </p>
-        <input
-          className="border py-3 pl-3"
-          type="text"
-          placeholder="your@email.com"
-        />
-        <input
-          className="mb-10 py-3 cursor-pointer px-5 bg-teal-900 text-white"
-          type="submit"
-          value="Sign Up"
-        />
-      </div>
-      <div className="container mx-auto px-12 mt-20 flex justify-between">
-        <div className="mt-20 w-[45%]">
-          <h1 className="font-normal text-2xl mb-6">
-            From a studio in London to a global brand with over 400 outlets
-          </h1>
-          <p className="mb-6">
-            When we started Avion, the idea was simple. Make high quality
-            furniture affordable and available for the mass market.
-          </p>
-          <p className="mb-40">
-            Handmade, and lovingly crafted furniture and homeware is what we
-            live, breathe and design so our Chelsea boutique become the hotbed
-            for the London interior design community.
-          </p>
-          <button className="border p-4">Get in touch</button>
-        </div>
-        <Image src={Furn} alt="" />
-      </div>
+      <JoinInput />
+      <ChangeCountry />
     </div>
   );
 }

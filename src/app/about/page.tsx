@@ -1,3 +1,4 @@
+import ChangeCountry from "@/components/ChangeCountry";
 import Header from "@/components/Header";
 import React from "react";
 
@@ -14,6 +15,10 @@ const About = () => {
         <h3 className="mx-4">Tableware</h3>
         <h3 className="mx-4">Cutlery</h3>
       </div>
+      <h1 className="text-center my-10 text-4xl font-normal">
+        A brand built on the love of craftmanship, outstanding customer service
+      </h1>
+      <ChangeCountry />
     </div>
   );
 };
