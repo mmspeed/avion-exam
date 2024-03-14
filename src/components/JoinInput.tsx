@@ -17,7 +17,7 @@ const JoinInput = () => {
           placeholder="your@email.com"
         />
         <input
-          className="mb-10 py-3 cursor-pointer px-5 bg-teal-900 text-white"
+          className="mb-10 py-3 cursor-pointer px-5 bg-blue-950 text-white"
           type="submit"
           value="Sign Up"
         />
