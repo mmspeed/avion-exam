@@ -90,6 +90,9 @@ body {
   .cartEl {
     width: 100%;
   }
+  .nInput {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -113,6 +116,15 @@ body {
   }
   .thx {
     flex-direction: column;
+  }
+  .footInfo {
+    flex-direction: column;
+  }
+  .infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
 }
 

@@ -5,8 +5,8 @@ import Links from "../assets/links.png";
 const Footer = () => {
   return (
     <>
-      <div className="bg-blue-950 container mx-auto px-12 text-white flex justify-between pb-10 pt-10">
-        <div className="flex">
+      <div className="footInfo bg-blue-950 container mx-auto px-12 text-white flex justify-between pb-10 pt-10">
+        <div className="infos flex">
           <div className="mr-24">
             <h3 className="mb-3">Menu</h3>
             <h3 className="mb-3">New arrivals</h3>
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="">
           <h2 className="font-normal text-base mb-3">Join our mailing list</h2>
           <input
-            className="bg-blue-900 p-3 pr-80 font-normal text-base"
+            className="nInput bg-blue-900 p-3 pr-80 font-normal text-base"
             type="text"
             placeholder="your@email.com"
           />
