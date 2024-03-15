@@ -59,6 +59,17 @@ body {
   .travelDesc {
     margin-bottom: 10px;
   }
+  .necessary {
+    flex-direction: column;
+  }
+  .filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .filtersF {
+    margin-right: 120px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -80,9 +91,31 @@ body {
   }
 }
 
+@media (max-width: 724px) {
+  .categoriesMain {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 624px) {
   .differentCard {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtCas {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .filtCar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 318px) {
+  .allP {
+    text-align: center;
   }
 }

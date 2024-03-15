@@ -16,7 +16,7 @@ const HomeHeader = () => {
         </div>
       </div>
       <hr />
-      <div className="text-gray-500 flex items-center justify-center my-4 mx-4">
+      <div className="categoriesMain text-gray-500 flex items-center justify-center my-4 mx-4">
         <h3 className="mx-4">Plant pots</h3>
         <h3 className="mx-4">Ceramics</h3>
         <h3 className="mx-4">Tables</h3>

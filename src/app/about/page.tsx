@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <div className="text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
+      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
         <h3 className="mx-4">Plant pots</h3>
         <h3 className="mx-4">Ceramics</h3>
         <h3 className="mx-4">Tables</h3>
@@ -23,9 +23,9 @@ const About = () => {
         A brand built on the love of craftmanship, outstanding customer service
       </h1>
       <ChangeCountry />
-      <div className="container mx-auto px-12 flex justify-between mb-16">
-        <Image src={EFurn} alt="" />
-        <div className="mt-20 w-[45%]">
+      <div className="travel container mx-auto px-12 flex justify-between mb-16">
+        <Image className="travelImg" src={EFurn} alt="" />
+        <div className="travelText mt-20">
           <h1 className="font-normal text-2xl mb-6">
             Our service isn't just personal, it's actually hyper personally
             exquisite
@@ -34,7 +34,7 @@ const About = () => {
             When we started Avion, the idea was simple. Make high quality
             furniture affordable and available for the mass market.
           </p>
-          <p className="mb-40">
+          <p className="travelDesc mb-40">
             Handmade, and lovingly crafted furniture and homeware is what we
             live, breathe and design so our Chelsea boutique become the hotbed
             for the London interior design community.
