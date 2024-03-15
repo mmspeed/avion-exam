@@ -25,3 +25,64 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (max-width: 1280px) {
+  .ceraText {
+    text-align: center;
+  }
+  .ceraCards {
+    flex-wrap: wrap;
+  }
+  .ceraCard {
+    margin-bottom: 10px;
+  }
+  .popText {
+    text-align: center;
+  }
+  .popCards {
+    flex-wrap: wrap;
+  }
+  .popCard {
+    margin-bottom: 10px;
+  }
+  .travel {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .travelText {
+    margin-bottom: 20px;
+  }
+  .travelImg {
+    width: 100%;
+  }
+  .travelDesc {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .furnitures {
+    flex-direction: column;
+  }
+  .furnituresImg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .differentCards {
+    flex-wrap: wrap;
+  }
+  .differentCard {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 624px) {
+  .differentCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

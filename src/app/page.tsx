@@ -33,7 +33,7 @@ export default function Home() {
         <h3 className="mx-4">Tableware</h3>
         <h3 className="mx-4">Cutlery</h3>
       </div>
-      <div className="my-16 text-white flex container mx-auto px-12">
+      <div className="furnitures my-16 text-white flex container mx-auto px-12">
         <div className="bg-gray-600 px-9 py-3">
           <h1 className="w-[460px] text-3xl my-6 font-normal">
             The furniture brand for the future, with timeless designs
@@ -45,28 +45,28 @@ export default function Home() {
             display things digitally using modern web technologies.
           </p>
         </div>
-        <Image className="w-[540px]" src={Chair} alt="" />
+        <Image className="furnituresImg w-[540px]" src={Chair} alt="" />
       </div>
       <Different />
       <div className="container mx-auto px-12">
-        <h1 className="font-normal text-2xl mb-10">New ceramics</h1>
-        <div className="flex justify-between items-center">
-          <div>
+        <h1 className="ceraText font-normal text-2xl mb-10">New ceramics</h1>
+        <div className="ceraCards flex justify-between items-center">
+          <div className="ceraCard">
             <Image src={Chair} alt="" />
             <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
             <p className="font-normal text-lg mb-6">£250</p>
           </div>
-          <div>
+          <div className="ceraCard">
             <Image src={Vase} alt="" />
             <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
             <p className="font-normal text-lg mb-6">£155</p>
           </div>
-          <div>
+          <div className="ceraCard">
             <Image src={Vasee} alt="" />
             <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
             <p className="font-normal text-lg mb-6">£125</p>
           </div>
-          <div>
+          <div className="ceraCard">
             <Image src={Lamp} alt="" />
             <h3 className="font-normal text-xl my-2">The Lucy Lamp</h3>
             <p className="font-normal text-lg mb-6">£399</p>
@@ -77,19 +77,21 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto px-12">
-        <h1 className="font-normal text-2xl mb-8">Our popular products</h1>
-        <div className="flex items-center justify-between">
-          <div>
+        <h1 className="popText font-normal text-2xl mb-8">
+          Our popular products
+        </h1>
+        <div className="popCards flex items-center justify-between">
+          <div className="popCard">
             <Image src={Large} alt="" />
             <h3 className="font-normal text-xl my-2">The Poplar suede sofa</h3>
             <p className="font-normal text-lg mb-6">£980</p>
           </div>
-          <div>
+          <div className="popCard">
             <Image src={Chair} alt="" />
             <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
             <p className="font-normal text-lg mb-6">£250</p>
           </div>
-          <div>
+          <div className="popCard">
             <Image src={Chir} alt="" />
             <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
             <p className="font-normal text-lg mb-6">£250</p>
