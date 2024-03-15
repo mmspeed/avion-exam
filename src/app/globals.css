@@ -70,6 +70,26 @@ body {
   .filtersF {
     margin-right: 120px;
   }
+  .soloInfo {
+    flex-direction: column;
+  }
+  .soloImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .info {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .raz {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cartEl {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -78,6 +98,21 @@ body {
   }
   .furnituresImg {
     display: none;
+  }
+  .infCart {
+    display: none;
+  }
+  hr {
+    display: none;
+  }
+  .cl {
+    display: none;
+  }
+  .clss {
+    margin-right: 0;
+  }
+  .thx {
+    flex-direction: column;
   }
 }
 
@@ -88,6 +123,9 @@ body {
   .differentCard {
     width: 50%;
     margin-bottom: 20px;
+  }
+  .textCart {
+    font-size: 20px;
   }
 }
 
@@ -101,6 +139,9 @@ body {
   .differentCard {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .cartCard {
+    width: 100%;
   }
 }
 

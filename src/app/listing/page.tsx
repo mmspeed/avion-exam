@@ -13,9 +13,9 @@ const ProductsListing = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto px-12 flex items-center">
-        <Image src={ListChair} alt="" />
-        <div className="ml-20">
+      <div className="soloInfo container mx-auto px-12 flex items-center">
+        <Image className="soloImg w-[100%]" src={ListChair} alt="" />
+        <div className="info ml-20">
           <h1 className="text-4xl font-normal mb-2">The Dandy Chair</h1>
           <h3 className="text-2xl font-normal mb-8">£250</h3>
           <h4 className="text-base font-normal mb-3">Description</h4>
@@ -31,7 +31,7 @@ const ProductsListing = () => {
             <li>Quality timeless classic</li>
           </ul>
           <h4 className="text-base font-normal mb-3">Dimensions</h4>
-          <div className="flex items-center">
+          <div className="raz flex items-center">
             <div className="mr-8">
               <p className="mb-1">Height</p>
               <p>110cm</p>
@@ -59,24 +59,26 @@ const ProductsListing = () => {
         </div>
       </div>
       <div className="container mx-auto px-12 mt-10">
-        <h1 className="font-normal text-2xl mb-10">You might also like</h1>
-        <div className="flex justify-between items-center">
-          <div>
+        <h1 className="ceraText font-normal text-2xl mb-10">
+          You might also like
+        </h1>
+        <div className="ceraCards flex justify-between items-center">
+          <div className="ceraCard mr-2">
             <Image src={Chair} alt="" />
             <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
             <p className="font-normal text-lg mb-6">£250</p>
           </div>
-          <div>
+          <div className="ceraCard mr-2">
             <Image src={Vase} alt="" />
             <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
             <p className="font-normal text-lg mb-6">£155</p>
           </div>
-          <div>
+          <div className="ceraCard mr-2">
             <Image src={Vasee} alt="" />
             <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
             <p className="font-normal text-lg mb-6">£125</p>
           </div>
-          <div>
+          <div className="ceraCard mr-2">
             <Image src={Lamp} alt="" />
             <h3 className="font-normal text-xl my-2">The Lucy Lamp</h3>
             <p className="font-normal text-lg mb-6">£399</p>

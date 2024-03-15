@@ -8,41 +8,53 @@ const Cart = () => {
   return (
     <div>
       <HomeHeader />
-      <div className="container mx-auto px-40 mb-10">
+      <div className="cartEl container mx-auto px-40 mb-10">
         <h1 className="mt-14 text-4xl font-normal mb-10">Your shopping cart</h1>
-        <div className="flex justify-between mb-4">
+        <div className="infCart flex justify-between mb-4">
           <h3>Product</h3>
           <h3>Quantity</h3>
           <h3>Total</h3>
         </div>
         <hr />
-        <div className="mt-5 flex justify-between items-center">
-          <div className="flex items-center">
+        <div className="thx mt-5 flex justify-between items-center">
+          <div className="cartCard flex items-center">
             <Image src={CartPro} alt="" />
             <div className="ml-5">
-              <h2 className="mb-2 text-2xl font-normal">Graystone vase</h2>
+              <h2 className="textCart mb-2 text-2xl font-normal">
+                Graystone vase
+              </h2>
               <p className="mb-2 text-sm font-normal">
                 A timeless ceramic vase with a color grey.
               </p>
               <h3 className="text-base font-normal">£85</h3>
             </div>
+            <div className="flex">
+              <button className="mr-3">-</button>
+              <h2 className="clss">1</h2>
+              <button className="ml-3">+</button>
+            </div>
           </div>
-          <h2 className="mr-[350px]">1</h2>
-          <h3>£85</h3>
+          <h3 className="cl">£85</h3>
         </div>
-        <div className="mt-5 flex justify-between items-center mb-4">
+        <div className="thx mt-5 flex justify-between items-center mb-4">
           <div className="flex items-center">
             <Image src={VasePro} alt="" />
             <div className="ml-5">
-              <h2 className="mb-2 text-2xl font-normal">Basic white vase</h2>
+              <h2 className="textCart mb-2 text-2xl font-normal">
+                Basic white vase
+              </h2>
               <p className="mb-2 text-sm font-normal">
                 Beautiful and simple this is the classics om.
               </p>
               <h3 className="text-base font-normal">£125</h3>
             </div>
+            <div className="flex">
+              <button className="mr-3">-</button>
+              <h2 className="clss">1</h2>
+              <button className="ml-3">+</button>
+            </div>
           </div>
-          <h2 className="mr-[350px]">1</h2>
-          <h3>£125</h3>
+          <h3 className="cl">£125</h3>
         </div>
         <hr />
       </div>
