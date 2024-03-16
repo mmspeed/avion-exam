@@ -11,20 +11,13 @@ import Large from "../assets/large.png";
 import JoinInput from "@/components/JoinInput";
 import Different from "@/components/Different";
 import ChangeCountry from "@/components/ChangeCountry";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto px-12 flex items-center justify-between min-h-14">
-        <Image className="w-5" src={Search} alt="" />
-        <h2 className="font-medium text-2xl">Avion</h2>
-        <div className="flex items-center">
-          <Image className="mx-2 w-5" src={Cart} alt="" />
-          <Image className="mx-2 w-5" src={User} alt="" />
-        </div>
-      </div>
-      <hr />
-      <div className="text-gray-500 flex items-center justify-center my-4 mx-4">
+      <Header />
+      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
         <h3 className="mx-4">Plant pots</h3>
         <h3 className="mx-4">Ceramics</h3>
         <h3 className="mx-4">Tables</h3>
@@ -33,7 +26,7 @@ export default function Home() {
         <h3 className="mx-4">Tableware</h3>
         <h3 className="mx-4">Cutlery</h3>
       </div>
-      <div className="furnitures my-16 text-white flex container mx-auto px-12">
+      <div className="furnitures  text-white flex container mx-auto px-12">
         <div className="bg-gray-600 px-9 py-3">
           <h1 className="w-[460px] text-3xl my-6 font-normal">
             The furniture brand for the future, with timeless designs

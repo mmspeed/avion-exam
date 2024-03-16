@@ -8,7 +8,7 @@ import Image from "next/image";
 const Different = () => {
   return (
     <div>
-      <div className="container mx-auto px-12 mb-20">
+      <div className="container mx-auto px-12 mb-20 mt-10">
         <h2 className="text-center text-2xl font-normal mb-10">
           What makes our brand different
         </h2>

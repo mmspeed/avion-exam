@@ -1,5 +1,4 @@
 import React from "react";
-import HomeHeader from "@/components/HomeHeader";
 import Image from "next/image";
 import Chair from "../../assets/chair.png";
 import Vase from "../../assets/vase.png";
@@ -10,11 +9,21 @@ import PChair from "../../assets/pchair.png";
 import Lamps from "../../assets/lamps.png";
 import Cup from "../../assets/cup.png";
 import Stul from "../../assets/stul.png";
+import Header from "@/components/Header";
 
 const Products = () => {
   return (
     <div>
-      <HomeHeader />
+      <Header />
+      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
+        <h3 className="mx-4">Plant pots</h3>
+        <h3 className="mx-4">Ceramics</h3>
+        <h3 className="mx-4">Tables</h3>
+        <h3 className="mx-4">Chairs</h3>
+        <h3 className="mx-4">Crockery</h3>
+        <h3 className="mx-4">Tableware</h3>
+        <h3 className="mx-4">Cutlery</h3>
+      </div>
       <div className="bg-gray-700 container mx-auto px-12">
         <h2 className="allP text-white font-normal text-4xl pt-8 pb-8">
           All products

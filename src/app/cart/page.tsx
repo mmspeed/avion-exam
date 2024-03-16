@@ -1,13 +1,22 @@
-import HomeHeader from "@/components/HomeHeader";
 import React from "react";
 import Image from "next/image";
 import CartPro from "../../assets/cartpro.png";
 import VasePro from "../../assets/vasepro.png";
+import Header from "@/components/Header";
 
 const Cart = () => {
   return (
     <div>
-      <HomeHeader />
+      <Header />
+      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
+        <h3 className="mx-4">Plant pots</h3>
+        <h3 className="mx-4">Ceramics</h3>
+        <h3 className="mx-4">Tables</h3>
+        <h3 className="mx-4">Chairs</h3>
+        <h3 className="mx-4">Crockery</h3>
+        <h3 className="mx-4">Tableware</h3>
+        <h3 className="mx-4">Cutlery</h3>
+      </div>
       <div className="cartEl container mx-auto px-40 mb-10">
         <h1 className="mt-14 text-4xl font-normal mb-10">Your shopping cart</h1>
         <div className="infCart flex justify-between mb-4">

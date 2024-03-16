@@ -8,7 +8,6 @@ import FastDelivery from "./FastDelivery";
 
 const Header = () => {
   const [isCLick, setIsClick] = useState();
-  const [del, setDel] = useState([]);
   const toggleNavbar = () => {
     setIsClick(!isCLick);
   };
