@@ -93,6 +93,9 @@ body {
   .nInput {
     padding-right: 0;
   }
+  .ozi {
+    margin-bottom: -120px;
+  }
 }
 
 @media (max-width: 1024px) {

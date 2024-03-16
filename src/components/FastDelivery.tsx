@@ -1,15 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import DeleteButton from "./DeleteButton";
 
 const FastDelivery = () => {
+  const [isContentVisible, setContentVisible] = useState(true);
+  const handleDelete = () => {
+    setContentVisible(false);
+  };
   return (
-    <div>
-      <div className="bg-blue-950 text-white p-3 container mx-auto px-12 flex items-center justify-between">
-        <h1 className="text-sm font-normal text-center">
-          Free delivery on all orders over £50 with code easter checkout
-        </h1>
-        <button className="">X</button>
-      </div>
-    </div>
+    <div>{isContentVisible && <DeleteButton onDelete={handleDelete} />}</div>
   );
 };
 
