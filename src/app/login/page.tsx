@@ -31,6 +31,7 @@ export default function Register() {
         <div>
           <label htmlFor="username">Username:</label>
           <input
+            className="border"
             type="text"
             id="username"
             name="username"
@@ -42,6 +43,7 @@ export default function Register() {
         <div>
           <label htmlFor="email">Email:</label>
           <input
+            className="border"
             type="email"
             id="email"
             name="email"
@@ -53,6 +55,7 @@ export default function Register() {
         <div>
           <label htmlFor="password">Password:</label>
           <input
+            className="border"
             type="password"
             id="password"
             name="password"
