@@ -5,6 +5,7 @@ import Search from "../assets/search.png";
 import Cart from "../assets/cart.png";
 import User from "../assets/user.png";
 import FastDelivery from "./FastDelivery";
+import Link from "next/link";
 
 const Header = () => {
   const [isCLick, setIsClick] = useState();
@@ -25,14 +26,14 @@ const Header = () => {
               Contact
             </h3>
             <h3 className="font-normal text-base text-gray-500 mr-10">Blog</h3>
-            <div className="flex">
+            <div className="flex items-center">
               <Image className="mr-3" src={Search} alt="" />
-              <a href="/cart">
+              <Link href="/cart">
                 <Image className="mr-3" src={Cart} alt="" />
-              </a>
-              <a href="/login">
+              </Link>
+              <Link href="/login">
                 <Image className="mr-3" src={User} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
