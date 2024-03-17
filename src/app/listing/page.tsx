@@ -8,6 +8,7 @@ import Chair from "../../assets/chair.png";
 import Vase from "../../assets/vase.png";
 import Vasee from "../../assets/vasee.png";
 import Lamp from "../../assets/lamp.png";
+import Footer from "@/components/Footer";
 
 const ProductsListing = () => {
   return (
@@ -90,6 +91,7 @@ const ProductsListing = () => {
       </div>
       <Different />
       <JoinInput />
+      <Footer />
     </div>
   );
 };

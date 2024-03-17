@@ -27,8 +27,12 @@ const Header = () => {
             <h3 className="font-normal text-base text-gray-500 mr-10">Blog</h3>
             <div className="flex">
               <Image className="mr-3" src={Search} alt="" />
-              <Image className="mr-3" src={Cart} alt="" />
-              <Image className="mr-3" src={User} alt="" />
+              <a href="/cart">
+                <Image className="mr-3" src={Cart} alt="" />
+              </a>
+              <a href="/login">
+                <Image className="mr-3" src={User} alt="" />
+              </a>
             </div>
           </div>
         </div>

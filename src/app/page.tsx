@@ -1,7 +1,4 @@
 import Image from "next/image";
-import Search from "../assets/search.png";
-import Cart from "../assets/cart.png";
-import User from "../assets/user.png";
 import Chair from "../assets/chair.png";
 import Vase from "../assets/vase.png";
 import Vasee from "../assets/vasee.png";
@@ -12,6 +9,7 @@ import JoinInput from "@/components/JoinInput";
 import Different from "@/components/Different";
 import ChangeCountry from "@/components/ChangeCountry";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -96,6 +94,7 @@ export default function Home() {
       </div>
       <JoinInput />
       <ChangeCountry />
+      <Footer />
     </div>
   );
 }

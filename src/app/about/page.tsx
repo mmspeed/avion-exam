@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import EFurn from "../../assets/EFurn.png";
 import Correct from "../../assets/correct.png";
 import Different from "@/components/Different";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -70,6 +71,7 @@ const About = () => {
           value="Sign Up"
         />
       </div>
+      <Footer />
     </div>
   );
 };

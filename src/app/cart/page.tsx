@@ -3,6 +3,7 @@ import Image from "next/image";
 import CartPro from "../../assets/cartpro.png";
 import VasePro from "../../assets/vasepro.png";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Cart = () => {
   return (
@@ -80,6 +81,7 @@ const Cart = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
