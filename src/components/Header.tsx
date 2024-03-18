@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Search from "../assets/search.png";
 import Cart from "../assets/cart.png";
 import User from "../assets/user.png";
 import FastDelivery from "./FastDelivery";
@@ -37,7 +36,6 @@ const Header = () => {
               Blog
             </a>
             <div className="flex items-center">
-              <Image className="mr-3" src={Search} alt="" />
               <Link className="flex items-center justify-center" href="/cart">
                 <Image className="mr-1" src={Cart} alt="" />
                 <span className="mr-3">{item.length}</span>
@@ -104,7 +102,6 @@ const Header = () => {
                 Blog
               </a>
               <div className="flex items-center">
-                <Image className="mr-3" src={Search} alt="" />
                 <Link className="flex items-center justify-center" href="/cart">
                   <Image className="mr-1" src={Cart} alt="" />
                   <span className="mr-3">{item.length}</span>
@@ -112,7 +109,7 @@ const Header = () => {
                 <Link href="/login">
                   <Image className="mr-3" src={User} alt="" />
                 </Link>
-              </div>  
+              </div>
             </div>
           </div>
         </div>

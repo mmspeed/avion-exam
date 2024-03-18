@@ -1,30 +1,31 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
-import { useDispatch } from "react-redux";
+import Footer from "@/components/Footer";
+import { AiOutlineSearch } from "react-icons/ai";
 import { add } from "@/reducers/cartSlice";
+import { useDispatch } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+
   const dispatch = useDispatch();
+
   const getProducts = async () => {
-    // const res = await fetch(
-    // "https://65f6bd7641d90c1c5e0b39ed.mockapi.io/products";
-    // );
     const res = await fetch(
       "https://65f6bd7641d90c1c5e0b39ed.mockapi.io/products"
     );
     const data = await res.json();
     setProducts(data);
   };
+
   const handleAdd = (product) => {
     dispatch(add(product));
   };
 
-
   useEffect(() => {
     getProducts();
-  });
+  }, []);
 
   return (
     <div>
@@ -43,6 +44,18 @@ const Products = () => {
           All products
         </h2>
       </div>
+      <form className="flex items-center justify-center mt-6">
+        <div className="relative">
+          <input
+            className="w-full p-4 rounded-full bg-slate-200"
+            type="search"
+            placeholder="Search..."
+          />
+          <button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-slate-300 rounded-full">
+            <AiOutlineSearch />
+          </button>
+        </div>
+      </form>
       <div className="necessary container mx-auto px-12 flex justify-between mt-10">
         <div className="filters">
           <div className="filtersF">
@@ -131,6 +144,7 @@ const Products = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
