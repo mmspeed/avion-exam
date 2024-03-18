@@ -6,12 +6,14 @@ import Cart from "../assets/cart.png";
 import User from "../assets/user.png";
 import FastDelivery from "./FastDelivery";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [isCLick, setIsClick] = useState();
   const toggleNavbar = () => {
     setIsClick(!isCLick);
   };
+  const item = useSelector((state) => state.cart);
   return (
     <>
       <FastDelivery />
@@ -19,17 +21,26 @@ const Header = () => {
         <h1 className="font-normal text-2xl">Avion</h1>
         <div className="hidden md:block">
           <div className="flex items-center">
-            <h3 className="font-normal text-base text-gray-500 mr-4">
+            <a
+              href="/about"
+              className="font-normal text-base text-gray-500 mr-4"
+            >
               About us
-            </h3>
-            <h3 className="font-normal text-base text-gray-500 mr-4">
-              Contact
-            </h3>
-            <h3 className="font-normal text-base text-gray-500 mr-10">Blog</h3>
+            </a>
+            <a
+              href="/products"
+              className="font-normal text-base text-gray-500 mr-4"
+            >
+              Products
+            </a>
+            <a href="/" className="font-normal text-base text-gray-500 mr-10">
+              Blog
+            </a>
             <div className="flex items-center">
               <Image className="mr-3" src={Search} alt="" />
-              <Link href="/cart">
-                <Image className="mr-3" src={Cart} alt="" />
+              <Link className="flex items-center justify-center" href="/cart">
+                <Image className="mr-1" src={Cart} alt="" />
+                <span className="mr-3">{item.length}</span>
               </Link>
               <Link href="/login">
                 <Image className="mr-3" src={User} alt="" />
@@ -92,11 +103,16 @@ const Header = () => {
               <a href="/" className="font-normal text-base text-gray-500 mr-10">
                 Blog
               </a>
-              <div className="flex">
+              <div className="flex items-center">
                 <Image className="mr-3" src={Search} alt="" />
-                <Image className="mr-3" src={Cart} alt="" />
-                <Image className="mr-3" src={User} alt="" />
-              </div>
+                <Link className="flex items-center justify-center" href="/cart">
+                  <Image className="mr-1" src={Cart} alt="" />
+                  <span className="mr-3">{item.length}</span>
+                </Link>
+                <Link href="/login">
+                  <Image className="mr-3" src={User} alt="" />
+                </Link>
+              </div>  
             </div>
           </div>
         </div>

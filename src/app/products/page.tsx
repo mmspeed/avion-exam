@@ -1,17 +1,31 @@
-import React from "react";
-import Image from "next/image";
-import Chair from "../../assets/chair.png";
-import Vase from "../../assets/vase.png";
-import Vasee from "../../assets/vasee.png";
-import Lamp from "../../assets/lamp.png";
-import Chir from "../../assets/chir.png";
-import PChair from "../../assets/pchair.png";
-import Lamps from "../../assets/lamps.png";
-import Cup from "../../assets/cup.png";
-import Stul from "../../assets/stul.png";
+"use client";
+import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
+import { useDispatch } from "react-redux";
+import { add } from "@/reducers/cartSlice";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const getProducts = async () => {
+    // const res = await fetch(
+    // "https://65f6bd7641d90c1c5e0b39ed.mockapi.io/products";
+    // );
+    const res = await fetch(
+      "https://65f6bd7641d90c1c5e0b39ed.mockapi.io/products"
+    );
+    const data = await res.json();
+    setProducts(data);
+  };
+  const handleAdd = (product) => {
+    dispatch(add(product));
+  };
+
+
+  useEffect(() => {
+    getProducts();
+  });
+
   return (
     <div>
       <Header />
@@ -92,61 +106,29 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="filtCa">
-          <div className="filtCas flex justify-between items-center">
-            <div className="filtCar mx-2">
-              <Image src={Chair} alt="" />
-              <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
-              <p className="font-normal text-lg mb-6">£250</p>
+        <div className="cards">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="card border-2 mb-5 p-3 rounded-md border-black"
+            >
+              <img
+                className="w-[100%] h-[250px] mb-3"
+                src={product.image}
+                alt=""
+              />
+              <hr className="mb-3" />
+              <h4 className="mb-2">{product.title}</h4>
+              <h5 className="mb-2">{product.price}</h5>
+              <button
+                className="border-2 p-2 font-semibold bg-blue-950 text-white border-blue-950
+                rounded-lg hover:text-blue-950 hover:bg-white duration-500"
+                onClick={() => handleAdd(product)}
+              >
+                Add to cart
+              </button>
             </div>
-            <div className="filtCar mx-2">
-              <Image src={Vase} alt="" />
-              <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
-              <p className="font-normal text-lg mb-6">£155</p>
-            </div>
-            <div className="filtCar mx-2">
-              <Image src={PChair} alt="" />
-              <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
-              <p className="font-normal text-lg mb-6">£125</p>
-            </div>
-          </div>
-          <div className="filtCas flex justify-between items-center">
-            <div className="filtCar mx-2">
-              <Image src={Vasee} alt="" />
-              <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
-              <p className="font-normal text-lg mb-6">£250</p>
-            </div>
-            <div className="filtCar mx-2">
-              <Image src={Lamp} alt="" />
-              <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
-              <p className="font-normal text-lg mb-6">£155</p>
-            </div>
-            <div className="filtCar mx-2">
-              <Image src={Chir} alt="" />
-              <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
-              <p className="font-normal text-lg mb-6">£125</p>
-            </div>
-          </div>
-          <div className="filtCas flex justify-between items-center">
-            <div className="filtCar mx-2">
-              <Image src={Lamps} alt="" />
-              <h3 className="font-normal text-xl my-2">The Dandy chair</h3>
-              <p className="font-normal text-lg mb-6">£250</p>
-            </div>
-            <div className="filtCar mx-2">
-              <Image src={Cup} alt="" />
-              <h3 className="font-normal text-xl my-2">Rustic Vase Set</h3>
-              <p className="font-normal text-lg mb-6">£155</p>
-            </div>
-            <div className="filtCar mx-2">
-              <Image src={Stul} alt="" />
-              <h3 className="font-normal text-xl my-2">The Silky Vase</h3>
-              <p className="font-normal text-lg mb-6">£125</p>
-            </div>
-          </div>
-          <div className="filtCas flex items-center justify-center">
-            <button className="border p-4 mb-20">Load more</button>
-          </div>
+          ))}
         </div>
       </div>
     </div>

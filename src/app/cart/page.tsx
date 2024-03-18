@@ -1,11 +1,19 @@
-import React from "react";
-import Image from "next/image";
-import CartPro from "../../assets/cartpro.png";
-import VasePro from "../../assets/vasepro.png";
+"use client";
+import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { remove } from "@/reducers/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
+  const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart);
+  const handleRemove = (id) => {
+    dispatch(remove(id));
+  };
   return (
     <div>
       <Header />
@@ -18,65 +26,41 @@ const Cart = () => {
         <h3 className="mx-4">Tableware</h3>
         <h3 className="mx-4">Cutlery</h3>
       </div>
-      <div className="cartEl container mx-auto px-40 mb-10">
-        <h1 className="mt-14 text-4xl font-normal mb-10">Your shopping cart</h1>
-        <div className="infCart flex justify-between mb-4">
-          <h3>Product</h3>
-          <h3>Quantity</h3>
-          <h3>Total</h3>
-        </div>
-        <hr />
-        <div className="thx mt-5 flex justify-between items-center">
-          <div className="cartCard flex items-center">
-            <Image src={CartPro} alt="" />
-            <div className="ml-5">
-              <h2 className="textCart mb-2 text-2xl font-normal">
-                Graystone vase
-              </h2>
-              <p className="mb-2 text-sm font-normal">
-                A timeless ceramic vase with a color grey.
-              </p>
-              <h3 className="text-base font-normal">£85</h3>
+      <h1 className="mt-14 text-4xl font-normal mb-20 container mx-auto px-20">
+        Your shopping cart
+      </h1>
+      <div className="container mx-auto px-20">
+        {cartItems.map((item) => (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-center">
+                <img className="w-[200px] mr-20" src={item.image} alt="" />
+                <div>
+                  <h5 className="font-bold text-xl mb-2">{item.title}</h5>
+                  <h4 className="mb-2">{item.description}</h4>
+                  <h5 className="font-normal text-md">{item.price}</h5>
+                </div>
+              </div>
+              <button
+                className="p-4 px-8 bg-red-700 text-white border-2 rounded-lg"
+                onClick={() => handleRemove(item.id)}
+              >
+                Remove
+              </button>
             </div>
-            <div className="flex">
-              <button className="mr-3">-</button>
-              <h2 className="clss">1</h2>
-              <button className="ml-3">+</button>
-            </div>
+            <hr className="mb-10" />
           </div>
-          <h3 className="cl">£85</h3>
-        </div>
-        <div className="thx mt-5 flex justify-between items-center mb-4">
-          <div className="flex items-center">
-            <Image src={VasePro} alt="" />
-            <div className="ml-5">
-              <h2 className="textCart mb-2 text-2xl font-normal">
-                Basic white vase
-              </h2>
-              <p className="mb-2 text-sm font-normal">
-                Beautiful and simple this is the classics om.
-              </p>
-              <h3 className="text-base font-normal">£125</h3>
-            </div>
-            <div className="flex">
-              <button className="mr-3">-</button>
-              <h2 className="clss">1</h2>
-              <button className="ml-3">+</button>
-            </div>
-          </div>
-          <h3 className="cl">£125</h3>
-        </div>
-        <hr />
+        ))}
       </div>
       <div className="container mx-auto px-40 mb-10">
         <h2 className="flex items-end justify-end font-normal text-2xl mb-2">
-          Subtotal £210
+          Subtotal: 210
         </h2>
         <p className="flex items-end justify-end font-normal text-sm mb-4">
           Taxes and shipping are calculated at checkout
         </p>
         <div className="flex items-end justify-end">
-          <button className="py-3 cursor-pointer px-5 bg-blue-950 text-white">
+          <button className="py-3 cursor-pointer px-5 bg-blue-950 text-white rounded-lg">
             Go to checkout
           </button>
         </div>

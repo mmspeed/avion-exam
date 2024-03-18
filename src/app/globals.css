@@ -26,6 +26,18 @@ body {
   }
 }
 
+.cards {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+}
+
 @media (max-width: 1280px) {
   .ceraText {
     text-align: center;
@@ -96,6 +108,12 @@ body {
   .ozi {
     margin-bottom: -120px;
   }
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -129,6 +147,9 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
   }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -141,6 +162,9 @@ body {
   }
   .textCart {
     font-size: 20px;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -155,9 +179,6 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
-  .cartCard {
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -167,6 +188,9 @@ body {
   }
   .filtCar {
     width: 100%;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
