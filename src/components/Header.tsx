@@ -14,7 +14,7 @@ const Header = () => {
   };
   const item = useSelector((state) => state.cart);
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 bg-white">
       <FastDelivery />
       <div className="flex items-center p-5 justify-between container mx-auto px-12">
         <h1 className="font-normal text-2xl">Avion</h1>
@@ -115,7 +115,7 @@ const Header = () => {
         </div>
       )}
       <hr />
-    </>
+    </div>
   );
 };
 

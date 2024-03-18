@@ -17,7 +17,7 @@ const Cart = () => {
   return (
     <div>
       <Header />
-      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4">
+      <div className="categoriesMain text-gray-500 bg-gray-100 flex items-center justify-center py-4 px-4 mt-[120px]">
         <h3 className="mx-4">Plant pots</h3>
         <h3 className="mx-4">Ceramics</h3>
         <h3 className="mx-4">Tables</h3>

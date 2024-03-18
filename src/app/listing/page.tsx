@@ -14,7 +14,7 @@ const ProductsListing = () => {
   return (
     <div>
       <Header />
-      <div className="soloInfo container mx-auto px-12 flex items-center">
+      <div className="soloInfo container mx-auto px-12 flex items-center mt-[120px]">
         <Image className="soloImg w-[100%]" src={ListChair} alt="" />
         <div className="info ml-20">
           <h1 className="text-4xl font-normal mb-2">The Dandy Chair</h1>

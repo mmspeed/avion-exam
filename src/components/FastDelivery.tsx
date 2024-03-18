@@ -9,7 +9,9 @@ const FastDelivery = () => {
     setContentVisible(false);
   };
   return (
-    <div>{isContentVisible && <DeleteButton onDelete={handleDelete} />}</div>
+    <div>
+      {isContentVisible && <DeleteButton onDelete={handleDelete} />}
+    </div>
   );
 };
 
