@@ -44,7 +44,7 @@ const Products = () => {
           All products
         </h2>
       </div>
-      <form className="flex items-center justify-center mt-6">
+      <form action="" className="flex items-center justify-center mt-6">
         <div className="relative">
           <input
             className="w-full p-4 rounded-full bg-slate-200"
