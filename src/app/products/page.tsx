@@ -51,9 +51,12 @@ const Products = () => {
             type="search"
             placeholder="Search..."
           />
-          <button className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-slate-300 rounded-full">
+          <a
+            href="#"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-slate-300 rounded-full"
+          >
             <AiOutlineSearch />
-          </button>
+          </a>
         </div>
       </form>
       <div className="necessary container mx-auto px-12 flex justify-between mt-10">
